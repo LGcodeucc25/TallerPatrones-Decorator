@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173b35">
+  <title>Hotel Booking — Decorator Pattern Demo</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Hotel Booking home">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>Casa Verde <span class="brand-note">HOTEL</span></span>
+    </a>
+    <span class="header-tag">A stay made yours</span>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">YOUR COLOMBIAN GETAWAY</p>
+      <h1 id="page-title">Hotel Booking — Decorator Pattern Demo</h1>
+      <p class="hero-copy">Start with a comfortable room, then make your stay your own.</p>
+    </section>
+
+    <div class="booking-layout">
+      <section class="booking-panel panel" aria-labelledby="customize-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PLAN YOUR STAY</p>
+            <h2 id="customize-title">Customize your booking</h2>
+          </div>
+          <span class="step-badge">01</span>
+        </div>
+
+        <label class="field-label" for="nights">Number of nights</label>
+        <div class="nights-control">
+          <input id="nights" name="nights" type="number" min="1" max="30" value="3" required>
+          <span>nights</span>
+        </div>
+        <p class="field-hint">Choose between 1 and 30 nights.</p>
+
+        <div class="addon-heading">
+          <h3>Enhance your experience</h3>
+          <span>OPTIONAL ADD-ONS</span>
+        </div>
+        <div id="addons" class="addon-list" aria-live="polite">
+          <p class="muted">Loading available add-ons...</p>
+        </div>
+        <p id="error-message" class="error-message" role="alert" hidden></p>
+      </section>
+
+      <section class="result-panel panel" aria-labelledby="summary-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR STAY</p>
+            <h2 id="summary-title">Booking summary</h2>
+          </div>
+          <span class="step-badge">02</span>
+        </div>
+
+        <p id="description" class="booking-description">Standard Room</p>
+        <div class="total-row">
+          <div>
+            <span class="total-label">TOTAL FOR YOUR STAY</span>
+            <p id="stay-detail" class="stay-detail">3 nights</p>
+          </div>
+          <strong id="total" class="total-price">—</strong>
+        </div>
+
+        <div class="amenities-section">
+          <h3>Included in your stay</h3>
+          <ul id="amenities" class="amenities-list">
+            <li>Double bed</li>
+            <li>Private bathroom</li>
+            <li>Wi-Fi</li>
+          </ul>
+        </div>
+
+        <div class="layers-section">
+          <div class="layers-heading">
+            <div>
+              <p class="eyebrow">HOW DECORATORS WRAP</p>
+              <h3>Decorator layers</h3>
+            </div>
+            <span class="layers-key"><span></span> Outer layer</span>
+          </div>
+          <div id="layers" class="layer-stack" aria-label="Booking decorator layers">
+            <div class="layer-box room-layer">
+              <span class="layer-type">BASE COMPONENT</span>
+              <strong>StandardRoom</strong>
+            </div>
+          </div>
+          <p class="layers-caption">Each selection wraps the booking with another service.</p>
+        </div>
+      </section>
+    </div>
+
+    <p class="page-footnote">All prices are shown in Colombian pesos (COP).</p>
+  </main>
+</body>
+</html>

@@ -541,9 +541,9 @@ specifically because the extras are **independent and freely combinable**.
 
 | Member | Part | Scope |
 | --- | --- | --- |
-| **[Member 1]** | Part 1 — Core model and documentation | `RoomBooking`, `StandardRoom`, `RoomBookingDecorator`, `README.md` |
-| **[Member 2]** | Part 2 — Concrete decorators and catalog | `BreakfastDecorator`, `SeaViewDecorator`, `SpaDecorator`, `AirportTransferDecorator`, `LateCheckoutDecorator`, `AddOnCatalog` |
-| **[Member 3]** | Part 3 — HTTP server, frontend and run scripts | `HotelServer`, `frontend/index.html`, `frontend/styles.css`, `frontend/app.js`, `run.sh`, `run.bat`, `.gitignore` |
+| **Luis Jamioy Guerrero** | Part 1 — Core model and documentation | `RoomBooking`, `StandardRoom`, `RoomBookingDecorator`, `README.md` |
+| **David Campiño** | Part 2 — Concrete decorators and catalog | `BreakfastDecorator`, `SeaViewDecorator`, `SpaDecorator`, `AirportTransferDecorator`, `LateCheckoutDecorator`, `AddOnCatalog` |
+| **Sara Valentina Delgado** | Part 3 — HTTP server, frontend and run scripts | `HotelServer`, `frontend/index.html`, `frontend/styles.css`, `frontend/app.js`, `run.sh`, `run.bat`, `.gitignore` |
 
 Each part was developed in parallel against the shared contract documented above:
 the `RoomBooking` interface, the add-on constants (`ID`, `NAME`, `PRICE`,
